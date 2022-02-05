@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Application</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="hcolor bg-info rounded shadow-lg">
+        <h1 class="p-1 rounded display-4 text-center mb-0">CRUD Application
+            Demo
+        </h1>
+        <h5 class=" text-dark text-right pb-3 pr-3">for feedback write us at&blacktriangleright; mrpawar221@gmail.com
+        </h5>
+    </div>
+
+    <div class="container">
+        <form id="fillData">
+            <div class="bg-light p-4 mb-2 shadow-lg box border rounded-lg border-lg">
+                <h2 class="text-warning font-weight-bold">User Information</h2>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <label for="fname">Name</label>
+                        <input type="text" class="form-control" id="fname" required>
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="person">ID No.</label>
+                        <input type="text" class="form-control" id="person" required>
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="mobile">Mobile Number</label>
+                        <div class="input-group ">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">+91</div>
+                            </div>
+                            <input type="text" class="form-control" maxlength="10" pattern="\d{10}" id="mobile">
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <input type="submit" value="Add User" class="btn btn-primary" id="submit">
+                    <input type="button" value="Update User" class="btn btn-primary" id="update">
+                </div>
+            </div>
+        </form>
+        <div class="row mt-5">
+            <div class="col-sm-8">
+                <table class="table table-bordered ">
+                    <thead class="bg-info text-white">
+                        <th>Sr. No.</th>
+                        <th>Name</th>
+                        <th>ID No</th>
+                        <th>Mobile Number</th>
+                        <th>Email</th>
+                        <th>Modify</th>
+                        <th>Delete</th>
+                    </thead>
+                    <tbody id="uiData">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
